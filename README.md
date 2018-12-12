@@ -172,7 +172,7 @@ COLLATE Chinese_PRC_CI_AS
 ```
 Chinese_PRC_CI_AS为排序规则，查看更多排序规则可以使用输入命令：`select * from :: fn_helpcollations()`查看规则表。
 
-值得注意的是文件扩展名要加上，参数之间没有逗号，组之间有参数。
+值得注意的是文件扩展名要加上，参数之间没有逗号，组之间有逗号。
 
 ### :memo:1.3修改数据库 ###
 
