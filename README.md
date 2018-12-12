@@ -63,3 +63,112 @@ Create database语句后面参数为：
 
   * ATTACH_REBUILD_LOG ：用来设置附加数据库的选项，该选项只限于读写数据库。
 
+注意一下示例注释采用的//不能在命令语句中，本文只是方便解释，编写代码不能采用这种注释
+
+示例1（自定义创建于目标文件夹） ：
+```
+create database t2
+ON
+(
+ //库名
+	NAME = "my1",
+ //创建位置
+	FILENAME= "F:\SQLServer\Sql\my1.mdf"
+)
+```
+
+示例2 （对数据库的存储大小进行限制）：
+```
+create database t3
+ON
+(
+	NAME = "my1",
+	FILENAME= "F:\SQLServer\Sql\my1.mdf",
+ //规定初始容量
+	SIZE = 5MB,
+ //最大容量
+	MAXSIZE= 10MB,
+ //文件增长的数量
+	FILEGROWTH = 5%
+)
+```
+
+示例4 （指定日志文件存入位置）：
+```
+create database t3
+ON
+(
+	NAME = "my1",
+	FILENAME= "F:\SQLServer\Sql\my1.mdf",
+	SIZE = 5MB,
+	MAXSIZE= 10MB,
+	FILEGROWTH = 5%
+)
+//日志文件
+LOG ON
+(
+//日志命名
+	NAME = "myTest",
+ //日志名存入文件位置
+	FILENAME = "F:\SQLServer\Sql\myTest1.ldf"
+)
+```
+
+示例5（写入多个数据文件以及数据组） ：
+```
+create database 数据库
+ON
+(
+	NAME = "数据库文件1",
+	FILENAME= "F:\SQLServer\Sql\my1.mdf",
+	SIZE = 5MB,
+	MAXSIZE= 10MB,
+	FILEGROWTH = 5%
+),
+(
+	NAME = "数据库文件2",
+	FILENAME= "F:\SQLServer\Sql\my2.mdf",
+	SIZE = 5MB,
+	MAXSIZE= 10MB,
+	FILEGROWTH = 5%
+),
+FILEGROUP 数据库文件组1
+(
+	NAME = "数据库文件3",
+	FILENAME= "F:\SQLServer\Sql\my3.mdf",
+	SIZE = 5MB,
+	MAXSIZE= 10MB,
+	FILEGROWTH = 5%
+)
+,
+FILEGROUP 数据库文件组2
+(
+	NAME = "数据库文件4",
+	FILENAME= "F:\SQLServer\Sql\my4.mdf",
+	SIZE = 5MB,
+	MAXSIZE= 10MB,
+	FILEGROWTH = 5%
+)
+LOG ON
+(
+	NAME = "日志文件1",
+	FILENAME = "F:\SQLServer\Sql\my1.ldf"
+)
+
+```
+
+示例6 ： （排序规则）
+```
+create database 我的数据库
+ON
+(
+	NAME = "数据库文件",
+	FILENAME= "F:\SQLServer\Sql\my1.mdf",
+	SIZE = 5MB,
+	MAXSIZE= 10MB,
+	FILEGROWTH = 5%
+)
+COLLATE Chinese_PRC_CI_AS
+```
+Chinese_PRC_CI_AS为排序规则，查看更多排序规则可以使用输入命令：`select * from :: fn_helpcollations()`查看规则表。
+
