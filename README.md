@@ -4,10 +4,7 @@
 
 ## 目录 ##
 
-:arrow_down:<a href="#a1">1.数据库管理</a>
+![1.数据库管理](https://github.com/Lumnca/StudySqlServer/blob/master/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AE%A1%E7%90%86.md)
 
-<p id="a1"></p>
-
-## :mortar_board: 数据库管理 ##
 
 
