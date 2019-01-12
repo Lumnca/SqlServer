@@ -13,3 +13,5 @@
 :octocat:[4.T-SQL程序](https://github.com/Lumnca/StudySqlServer/blob/master/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AE%A1%E7%90%86%E7%AF%87.md)
 
 :octocat:[5.视图](https://github.com/Lumnca/StudySqlServer/blob/master/%E8%A7%86%E5%9B%BE.md)
+
+:octocat:[6.存储过程](https://github.com/Lumnca/StudySqlServer/blob/master/%E5%AD%98%E5%82%A8%E8%BF%87%E7%A8%8B.md)
