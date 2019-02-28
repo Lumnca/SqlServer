@@ -19,3 +19,5 @@
 :octocat:[7.触发器](https://github.com/Lumnca/SqlServer/blob/master/%E8%A7%A6%E5%8F%91%E5%99%A8.md)
 
 :octocat:[8.索引](https://github.com/Lumnca/SqlServer/blob/master/%E7%B4%A2%E5%BC%95.md)
+
+暂时写这么点吧，以后继续更新
